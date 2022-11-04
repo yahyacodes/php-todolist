@@ -5,7 +5,7 @@ include "db.php";
 
 <section class="p-5 mt-5">
     <div class="container">
-        <h1 class="text-light opacity-50 fs5 ms-5">Bending Tasks</h1>
+        <h1 class="text-light opacity-50 fs5 ms-5">Pending Tasks</h1>
 
         <table class="table table-dark table-striped mt-5 ms-5 text-light w-75 table-bordered">
             <thead>
@@ -33,8 +33,8 @@ include "db.php";
                 echo "<td>$todo_id</td>";
                 echo "<td>$user_todo</td>";
                 echo "<td>$todo_date</td>";
-                echo "<td><a href='bending.php?incomplete=$todo_id' class='text-decoration-none text-light'>Incomplete</a></td>";
-                echo "<td><a href='bending.php?delete=$todo_id' class='btn btn-danger btn-sm'>X</a></td>";
+                echo "<td><a href='pending.php?incomplete=$todo_id' class='text-decoration-none text-light'>Incomplete</a></td>";
+                echo "<td><a href='pending.php?delete=$todo_id' class='btn btn-danger btn-sm'>X</a></td>";
                 echo "</tr>";
             }
 
@@ -67,7 +67,7 @@ if(isset($_GET['delete'])) {
 
     $query = "DELETE FROM todo WHERE todo_id = {$the_todo_id} ";
     $delete_query = mysqli_query($connection, $query);
-    header("Location: bending.php");
+    header("Location: pending.php");
 }
 
 

@@ -23,9 +23,9 @@
                             Todo
                         </li>
                     </a>
-                    <a href="bending.php" class="text-decoration-none">
+                    <a href="pending.php" class="text-decoration-none">
                         <li class="nav-item text-light">
-                            Bending
+                            Pending
                         </li>
                     </a>
                     <a href="login.php" class="text-decoration-none">
